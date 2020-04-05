@@ -16,9 +16,8 @@ public class Solution {
 	 * @param right 右側の塔 (初期状態では空)
 	 * @param logger ログ表示用オブジェクト
 	 */
-	public void solve( Tower left, Tower middle, Tower right, Logger logger ) throws HanoiException {
+	public void solve(Tower left, Tower middle, Tower right, Logger logger) throws HanoiException {
 		// 以下の処理を全て削除してから、solve メソッドを実装してみてください。
-
 		logger.info("このプログラムは演習教材用です。");
 		logger.info("jp.trans_it.hanoi.Solution クラスの solve メソッドを実装して、ハノイの塔を動かしてみて下さい。");
 		logger.info("一度に動かせる円盤は一枚だけです。");
