@@ -22,6 +22,22 @@ public class Logger {
 	}
 
 	/**
+	 * エラー表示
+	 * @param message エラーメッセージ
+	 */
+	public void error(String message) {
+		this.addText("ERROR", message);
+	}
+
+	/**
+	 * 警告表示
+	 * @param message 警告メッセージ
+	 */
+	public void warning(String message) {
+		this.addText("WARN",  message);
+	}
+
+	/**
 	 * 情報表示
 	 * @param message 情報メッセージ
 	 */

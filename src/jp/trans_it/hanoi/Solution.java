@@ -18,7 +18,7 @@ public class Solution {
 	 */
 	public void solve(Tower left, Tower middle, Tower right, Logger logger) throws HanoiException {
 		// 以下の処理を全て削除してから、solve メソッドを実装してみてください。
-		logger.info("このプログラムは演習教材用です。");
+		logger.info("このプログラムは演習用教材です。");
 		logger.info("jp.trans_it.hanoi.Solution クラスの solve メソッドを実装して、ハノイの塔を動かしてみて下さい。");
 		logger.info("一度に動かせる円盤は一枚だけです。");
 		logger.info("大きな円盤を小さな円盤の上に乗せることはできません。");

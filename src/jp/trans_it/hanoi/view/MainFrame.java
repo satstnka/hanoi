@@ -71,6 +71,7 @@ public class MainFrame implements Initializable {
 		}
 		else {
 			this.logText.setText("");
+			String errorMessage = null;
 
 			Solution solution = new Solution();
 			Hanoi hanoi = this.canvas.getHanoi();
@@ -78,10 +79,10 @@ public class MainFrame implements Initializable {
 				solution.solve(hanoi.getLeft(), hanoi.getMiddle(), hanoi.getRight(), logger);
 			}
 			catch(Exception e) {
-				e.printStackTrace();
+				errorMessage = e.getMessage();
 			}
 			this.canvas.getHanoi().prepareDraw();
-			this.canvas.startDraw();
+			this.canvas.startDraw(errorMessage);
 
 			this.startButton.setText("Reset");
 		}

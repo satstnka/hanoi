@@ -66,11 +66,11 @@ public class HanoiCanvas extends Canvas {
 	/**
 	 * 描画開始
 	 */
-	public void startDraw() {
+	public void startDraw(String errorMessage) {
 		HanoiCanvas me = this;
 		Hanoi hanoi = this.getHanoi();
 
-		this.stopDraw();
+		this.stopDraw(null);
 
 		this.timeline = new Timeline(
 			new KeyFrame(
@@ -78,7 +78,7 @@ public class HanoiCanvas extends Canvas {
 				(event) -> {
 					me.draw();
 					if(hanoi.isEmptyAction()) {
-						me.stopDraw();
+						me.stopDraw(errorMessage);
 					}
 					else {
 						try {
@@ -98,10 +98,14 @@ public class HanoiCanvas extends Canvas {
 	/**
 	 * 描画停止
 	 */
-	public void stopDraw() {
+	public void stopDraw(String errorMessage) {
 		if(this.timeline != null) {
 			this.timeline.stop();
 			this.timeline = null;
+			if(errorMessage != null) {
+				Logger logger = Logger.getLogger();
+				logger.error(errorMessage);
+			}
 		}
 	}
 
